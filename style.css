@@ -15,11 +15,12 @@
     align-items: center;
     background-color: #ED1FA7;
     color: white;
+    overflow: hidden;
 }
 
 h1{
     font-family: 'Caveat', cursive;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
 }
 
 #welcome{
@@ -54,15 +55,10 @@ h1{
     cursor: pointer;
     outline:none;
     position:relative;
-    
-    /* color:white; */
 }
 
 #searchicon{
     height:20px;
-    position:absolute;
-    left: 850px;
-
 }
 
 .inputbox{
@@ -70,7 +66,7 @@ h1{
 }
 
 .randomchoice > p, .userpreference > p{
-    padding-top: 30px;
+    padding-top: 35px;
     font-family: 'Caveat', cursive;
     font-size: 2rem;
 }
@@ -80,10 +76,11 @@ h1{
     font-family: 'Caveat', cursive;
     font-size: 1.2rem;
     background-color: #ED1FA7;
+    overflow: hidden;
 }
 
 #random{
-    padding:10px;
+    padding:20px;
 }
 
 #userchoice{
@@ -91,7 +88,7 @@ h1{
     grid-template-columns: repeat(4,1fr);
     column-gap: 10px;
     row-gap: 30px;
-    padding-top: 15px;
+    padding-top: 30px;
 }
 
 #userchoicenotfound{
@@ -109,6 +106,8 @@ h1{
 #mealname{
     font-family: 'Caveat', cursive;
     overflow: hidden;
+    font-size: 1.3rem;
+    padding-top: 13px;
 }
 
 #topic{
@@ -123,9 +122,9 @@ h1{
 
 table{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
-    border-spacing: 30px 5px;
+    border-spacing: 30px 6px;
     margin: 0 auto;
 }
 
@@ -165,5 +164,23 @@ hr {
 #searchicon{
     left: 310px;
 }
+
+#modal{
+    max-width: 100%;
+    width:90%;
+}
+
+h1{
+    font-size: 1.4rem;
+}
+
+#welcome{
+    font-size: 1.2rem;
+}
+
+#text{
+    font-size: 1rem;
+}
+
 
 }

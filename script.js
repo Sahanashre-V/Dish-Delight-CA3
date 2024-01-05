@@ -19,6 +19,9 @@ fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
     randommealname.innerText = `${data.meals[0].strMeal}`
     randommealimg.src = `${data.meals[0].strMealThumb}`
 
+    randommealname.style.fontSize = "1.3rem"
+    randommealname.style.paddingTop = "13px"
+
     popup.innerHTML+=`
             <img src=${data.meals[0].strMealThumb} id="modalimg">`
             table.innerHTML += `<tr>
@@ -29,6 +32,7 @@ fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
     modalimg.style.height = "180px"
     modalimg.style.borderRadius="10px"
     modalimg.style.border = "3px solid #ED1FA7"
+    modalimg.style.boxShadow = "rgba(30, 10, 30, 0.27) 1.95px 1.95px 2.6px"
     
 
     for(let i=0; i<21 ; i++){
@@ -53,6 +57,8 @@ fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
 randommealimg.style.height = "300px";
 randommealimg.style.border = "4px solid #ED1FA7";
 randommealimg.style.borderRadius = "10px";
+randommealimg.style.boxShadow = "rgba(30, 10, 30, 0.27) 1.95px 1.95px 2.6px"
+
 
 // styling for mealname
 randommealname.style.fontFamily = 'Caveat, cursive';
