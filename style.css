@@ -165,11 +165,6 @@ hr {
     left: 310px;
 }
 
-#modal{
-    max-width: 100%;
-    width:90%;
-}
-
 h1{
     font-size: 1.4rem;
 }
@@ -182,5 +177,8 @@ h1{
     font-size: 1rem;
 }
 
+#text,table{
+    font-family: 'Gill Sans', 'Gill Sans MT',cursive;
+}
 
 }
