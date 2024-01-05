@@ -59,6 +59,7 @@ h1{
 
 #searchicon{
     height:20px;
+    cursor: pointer;
 }
 
 .inputbox{

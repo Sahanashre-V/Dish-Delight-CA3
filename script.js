@@ -54,10 +54,11 @@ fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
 .catch(error => console.log("Error",error))
 
 // styling for mealimages
-randommealimg.style.height = "300px";
-randommealimg.style.border = "4px solid #ED1FA7";
-randommealimg.style.borderRadius = "10px";
+randommealimg.style.height = "300px"
+randommealimg.style.border = "4px solid #ED1FA7"
+randommealimg.style.borderRadius = "10px"
 randommealimg.style.boxShadow = "rgba(30, 10, 30, 0.27) 1.95px 1.95px 2.6px"
+randommealimg.style.cursor = "pointer"
 
 
 // styling for mealname
