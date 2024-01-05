@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#logo{
+    height:120px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ED1FA7;
+    color: white;
+}
+
+h1{
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+}
+
+#welcome{
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    padding-top: 30px;
+}
+
+#text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    color:#ED1FA7
+}
+
+.inputbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputvalue{
+    height: 40px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px 0px;
+    font-size: 1rem;
+    box-shadow: rgba(28, 26, 26, 0.37) 1.95px 1.95px 2.6px;
+    padding: 5px;
+    background-color:#ed1fa738;
+    cursor: pointer;
+    outline:none;
+    position:relative;
+    
+    /* color:white; */
+}
+
+#searchicon{
+    height:20px;
+    position:absolute;
+    left: 850px;
+
+}
+
+.inputbox{
+    padding-top: 30px;
+}
+
+.randomchoice > p, .userpreference > p{
+    padding-top: 30px;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+}
+
+.designed{
+    /* padding-top: 60px; */
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    background-color: #ED1FA7;
+}
+
+#random{
+    padding:10px;
+}
+
+#userchoice{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+    padding-top: 15px;
+}
+
+#userchoicenotfound{
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+#usermealimage{
+    height:260px;
+    border: 3px solid #ED1FA7;
+    border-radius: 10px;
+    box-shadow: rgba(30, 10, 30, 0.27) 1.95px 1.95px 2.6px;
+}
+
+#mealname{
+    font-family: 'Caveat', cursive;
+    overflow: hidden;
+}
+
+#topic{
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+}
+
+#popup{
+    font-family: 'Caveat', cursive;
+    font-size: 1rem;
+}
+
+table{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    border-spacing: 30px 5px;
+    margin: 0 auto;
+}
+
+#modal{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #ED1FA7;
+    outline: none;      /*outline is looking like a border */
+}
+
+hr {
+    background: #a8a7a7;
+    margin: 0px 450px;
+}
+
+.sah{
+    padding-top: 20px;
+}
+
+
+
+/* mobile responsive */
+@media screen and (max-width: 600px){
+    #userchoice{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+}
+
+#usermealimage{
+    height:160px;
+}
+
+#searchicon{
+    left: 310px;
+}
+
+}
