@@ -73,7 +73,6 @@ h1{
 }
 
 .designed{
-    /* padding-top: 60px; */
     font-family: 'Caveat', cursive;
     font-size: 1.2rem;
     background-color: #ED1FA7;
@@ -116,6 +115,7 @@ h1{
     font-size: 1.2rem;
 }
 
+/* styling for modal */
 #popup{
     font-family: 'Caveat', cursive;
     font-size: 1rem;
@@ -149,6 +149,10 @@ hr {
     padding-top: 20px;
 }
 
+#exitimg{
+    height:25px;
+    cursor: pointer;
+}
 
 
 /* mobile responsive */

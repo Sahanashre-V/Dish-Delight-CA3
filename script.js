@@ -11,7 +11,7 @@ let table = document.getElementById("table");
 let exitimg = document.getElementById("exitimg");
 let popup = document.getElementById("popup");
 
-
+// fetching data for random images from random api
 fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
 .then(response => response.json())
 .then(data => {
@@ -19,9 +19,11 @@ fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
     randommealname.innerText = `${data.meals[0].strMeal}`
     randommealimg.src = `${data.meals[0].strMealThumb}`
 
+    // styling for randommealname
     randommealname.style.fontSize = "1.3rem"
     randommealname.style.paddingTop = "13px"
 
+    // adding images, ingridients, quanitity and instructions to modal
     popup.innerHTML+=`
             <img src=${data.meals[0].strMealThumb} id="modalimg">`
             table.innerHTML += `<tr>
@@ -29,12 +31,14 @@ fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
                 <th id="topic">Quantity</th>
             </tr>`
     let modalimg = document.getElementById("modalimg")
+
+    //styling modalimg
     modalimg.style.height = "180px"
     modalimg.style.borderRadius="10px"
     modalimg.style.border = "3px solid #ED1FA7"
     modalimg.style.boxShadow = "rgba(30, 10, 30, 0.27) 1.95px 1.95px 2.6px"
     
-
+// for loop from 0 to 21 because strIngredient are from 0 to 20. If value of strIngridients is not null then adding it to the table.
     for(let i=0; i<21 ; i++){
         if (data.meals[0][`strIngredient${i}`]!=null){
             table.innerHTML+=`
@@ -45,6 +49,8 @@ fetch (`https://www.themealdb.com/api/json/v1/1/random.php`)
         }
     
     }
+
+    //appending popup to table.
     popup.appendChild(table);
     popup.innerHTML+= `<h2>Instructions</h2>
     <p>${data.meals[0].strInstructions} </p>`
@@ -64,6 +70,7 @@ randommealimg.style.cursor = "pointer"
 // styling for mealname
 randommealname.style.fontFamily = 'Caveat, cursive';
 
+//fetching data from second api according to user's search
 searchicon.addEventListener("click", function () {
     let inputvalue = document.getElementById("inputvalue").value;
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${inputvalue}`)
@@ -79,7 +86,8 @@ searchicon.addEventListener("click", function () {
                         <p id="mealname">${element.strMeal}</p>
                     </div>`;
                 });
-            } else {
+            } 
+            else {
                 userchoicenotfound.innerHTML += `<p>No results found</p>`;
                 userchoicenotfound.style.fontFamily = "Caveat, cursive";
                 userchoicenotfound.style.fontSize = "1.5rem";
@@ -89,10 +97,12 @@ searchicon.addEventListener("click", function () {
         .catch(error => console.log("Error", error));
 });
 
+//show modal
 randommealimg.addEventListener("click",function(){
     modal.showModal();
 })
 
+//close modal
 exitimg.addEventListener("click",function(){
     modal.close()
 })
